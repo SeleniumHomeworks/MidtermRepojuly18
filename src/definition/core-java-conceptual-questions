@@ -10,39 +10,94 @@ A.is a software suite that consolidates the basic tools developers need to write
 What are the IDEs available in the market to support java?
 A. Netbeans, Eclipse, Intellij, Android studio, Enide Studio, BlueJ, Jedit, Jgrasp, Jsource and JDeveloper.
 Explain the entire java life cycle.
+A. First with Editor (IDE) write the code -> Transfer the source code -> and then compile(Javac) into -> Byte Codes amd then
+the JVM can read, after they send it to the main Operating System.
 what is class?
+A.  A class is a template for creating different codes which defines its properties and behaviors.
 What is object?
+A. a object is a self-contained component which includes properties to make a particular type data useful.
 What is the entry point of an application?
+A. the main method or  (Public Static void main(String [] args){ }
 Why main is static?
+A. because since is static it can be called by the JVM trought the class.
 Which class is the superclass of all classes?
+A. java.lang.Object is a super class of any class by default.
 What is difference between path and classpath variables?
+A. the difference is that path is an environment variable wich is used to locate de JDK
+binares.
 What is the difference between an Interface and Abstract class?
+A. The difference is that on the interface you just can declare methods, in the other hand in the abstract class you can
+Implement and Initialize by using the Abstract Key Word.
 Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
+A. No, you cannot create an Object from an Interface or Abstract class. The way to use them is the Interface you must
+Implements to a class, and the Abstract class we must extends to another class.
 what is Access Specifier?
+A.Is what defines the access of a class, method, constructor, variable or data member.
 What is OOP ? Define each feature of java OOP.
+A. OOP stands for Object Oriented Programming and is a programming style which assosiates different concepts like:
+Inheritance: is the mechanism which allows to inherit feature for another class.
+Polymorphism : this is the ability of an object to take many forms.
+Encapsulation : Is the ability of hiding data or variables.
+Abstraction : is defined by the Abstract keyword and abstract method is a method that we declare with out
+implementation.
 What is Java Package and which package is imported by default?
+A.is the mechanism used for organizing java classes into namespaces similar to the modules.
 What is API? Name list of API that you have used so far.
+A. Is a set of comunication protocols and tools used for building a software.
+java.util;
+java.text;
+java.lang;
 Does java support multiple inheritance, explain why or why not?
+A. No, it does not support multiple inheritance, and it doesn't allow it to avoid the ambiguity caused by it.
 What is method overloading and when it happens?
+A. method overloading occurs when we use the same methods and add different parameters and different body to it.
 Explain exceptions in java and how to handle it.
+A. Exception is a problem that occurs during the run time of the application. And we can handle it by using the
+try-catch block.
 What is static keyword in java? How it has been used in variables and methods ?
+A. is a keyword used to determinate that the variable or function belongs to the class and can be called by the class,
+no by an object.
 What is final and how it has been used variables and methods?
+A. final is a keyword used to determinate that the variable, method or class cannot be changed or overriden.
 What is final, finally and finalize?
+A. final is a keyword used to determinate that the method, variable or class cannot be changed, finally is a block
+used to execute codes such as closing connection, and finalize is a method called by the garbage collector or gc. on
+an object when garbage collection determines that there are no more references to the object.
 What is a constructor ?
+A.Is a block of code that is called when an instance of a object is created.
 Can we have multiple constructors in a class?
+A. Yes.
 If we don't have a constructor declared, what is called during the object creation?
+A. the default constructor is called.
 What is "this" keyword in java ?
+A. it works as a reference to the current object, whose constructor or method is being invoked.
 What is "super" keyword in java? How many possible way can you use?
+A.is used in a sub class method to call a method that has been already defined in the superclass.
 What is JVM stand for ?
+A. Java Virtual Machine.
 Is JVM platform independent?
+A. No.
 What version of java are you using?
+A. java 10.0.2
 What is JAR stand for ?
+A. Java ARchive.
 What is the difference between JDK and JVM?
+A. JVM or Java Virtual Machine is an abstract machine and JDK or Java Development Kit phisically exist and it contains
+JRE and development tools.
 What is the difference between JVM and JRE?
+A. JRE is used to provide runtime enviroment, in other words it is the implementation of JVM, and the JVM is the virtual
+machine that runs the bytecodes.
 What is compile time and run time?
+A. Compile time is when we write the code for the program we are creating and run time is te ejecutation of a program
+in the console.
 What is heap?
+A.Heap is the part of the memory that is not managed automatically for the user.
 How java manage it's memory?
+A. Memory is divided in two parts (Heap and Stack) and java has an automatic memory managment and garbage collector
+that works in the background to free up memory.
 What is the difference between String, StringBuffer and StringBuilder?
+A. One of the difference is that String is immutable while StringBuffer and StringBuilder are mutable, Also StringBuffer
+is thread Safe , And String concat (+) operator internally uses StringBuffer or StringBuilder class.
 What is Singleton class?
 What is Serialization and Deserialization?
 when to use transient variable in java?
