@@ -1,10 +1,14 @@
 Please answer the below core-java Questions:
 
 What is programing language?
-A.
+A.Java is a general-purpose computer-programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible.
 What jdk contains or composed of and define each components?
+A.The Runtime Interpreter,the Compilee, the Applet Viewer, the Debugger, the Class File Disassembler, the Header and Stub File Generator
+the Documentation Generator, applet Demos.
 What is IDE?
+A.is a software suite that consolidates the basic tools developers need to write and test software.
 What are the IDEs available in the market to support java?
+A. Netbeans, Eclipse, Intellij, Android studio, Enide Studio, BlueJ, Jedit, Jgrasp, Jsource and JDeveloper.
 Explain the entire java life cycle.
 what is class?
 What is object?
