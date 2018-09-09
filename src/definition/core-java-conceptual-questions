@@ -99,28 +99,73 @@ What is the difference between String, StringBuffer and StringBuilder?
 A. One of the difference is that String is immutable while StringBuffer and StringBuilder are mutable, Also StringBuffer
 is thread Safe , And String concat (+) operator internally uses StringBuffer or StringBuilder class.
 What is Singleton class?
+A. Is a class that can have only one object.
 What is Serialization and Deserialization?
+A. Serialization is the procces of converting an object into bytes that can be persisted to a disk or database,
+and deserialization is same proccess in reverse which means converting byte code into an object.
 when to use transient variable in java?
+A.We use transient when we dont want certain part of our code to be serialized.
 Difference between while and do..while loop?
+A.The while loop checks the condition before doing the task assigned on the body of the loop, in the other hand
+the do while loop does one task before checking the condition and if the condition is met it runs the second part
+provided on the while body.
 What is Enum?
+A. Is a java type used to define collections of contants.
 What is Iterator?
+A.Iterator is an object that represents a stream of data.
 Which one will take more memory, an int or Integer?
+A. int and Integer both take the same memory.
 Why is String Immutable in Java?
+A. Because String objects are cached in String pool.
 What is constructor chaining in Java?
+A. this is the procces of calling one constructor from another constructor.
 The difference between Serial and Parallel Garbage Collector?
+A.Serial collector:a default copying collector which uses only one Garbage Collection thread for the Garbage Collection operation
+Parallel collector: uses multiple Garbage Collection threads for the Garbage Collection operation
 What is JIT stands for?
+A. Just In Time.
 Explain Java Heap space and Garbage collection?
+A.Java Heap space and Garbage collection are:
+Java Heap space: divided into three regions for sake of garbage collection called New Generation, Old or tenured Generation or Perm Space
+Garbage collection: The garbage collector is a program which runs on the JVM which gets rid of objects which are not being used by a Java application anymore
+
 Can you guarantee the garbage collection process?
+A. garabage collection procces is not guaranteed.
 What is the difference between stack and heap in Java?
+A.Stack creates a memory to the created object
+Stack is used for static memory allocation and Heap for dynamic memory allocation.
+Both stored in the computer's RAM.
+Variables allocated on the stack are stored directly to the memory and access to this memory is very fast.
+
 What is reflection in java and why is it useful?
+A. Reflection is used to describe code which is able to ispect other code in the same system. it help the user gain
+insight and see how to move foward.
 what is multithreading in java?
+A.it is the procces sthat we use to execute multiple threads simultaneously.
 What is the use of synchronization in Java?
+A.Is used to provide mutually exclusive acces to a shared resource with multiple java threads.
 What is Framework?
+A.a framework is nothing but large bodies of java codes where you can apply your own code to solve problems
+in the specific domain.
 What are the testing Framework available in java?
+A.Selenium
+testNG
+JUnit
+Cucumber
+DB Unit.
 Difference between jUnit and testNG?
+A. The main difference is the scope and dependency.
 What are the dependencies for this project?
+A. the dependecies are:
+mongo-java-driver-3.4.0.jar
+mysql-connector-java-5.1.41-bin.jar
+testng-6.8.7.jar
 what is dependency injection in java?
+A. This means that if I create an file or program with some dependencies I also include the dependecies on the project
+so if another user try to acces to it, it has the dependencies alredy in it.
 What is static binding and dynamic binding?
+A.The binding which can be resolved at compile time by compiler is known as static or early binding.
+Binding of all the static, private and final methods is done at compile-time.
 
 
 
