@@ -14,7 +14,12 @@ public class FortuneEmployee {
 	 *
 	 **/
 	public static void main(String[] args) {
-		
+		EmployeeInfo emp1 = new EmployeeInfo( "MR MAFI",305);
+		EmployeeInfo emp2 = new EmployeeInfo("MR SELENIUM", 205);
+		EmployeeInfo emp3 = new EmployeeInfo("mohammed", 234);
+
+		emp1.assignDepartment("");
+
 
 
 	}

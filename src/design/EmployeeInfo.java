@@ -1,8 +1,10 @@
 package design;
 
+import jdk.internal.joptsimple.util.DateConverter;
+
 import java.util.Scanner;
 
-public class EmployeeInfo {
+public class EmployeeInfo extends EmployeeAbstract {
 	
  /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
  * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
@@ -21,7 +23,11 @@ public class EmployeeInfo {
 	 * declare few static and final fields and some non-static fields
 	 */
 	static String companyName;
-	
+	static private int employeeId;
+	private String employeeName;
+	private String departamentName;
+	private static int salary;
+	private  static double performance;
 	/*
 	 * You must implement the logic for below 2 methods and 
 	 * following 2 methods are prototype as well for other methods need to be design,
@@ -33,10 +39,11 @@ public class EmployeeInfo {
 	 * Must implement below constructor.
 	 */
 	public EmployeeInfo(int employeeId){
-		
+		this.employeeId = employeeId;
 	}
-    public EmployeeInfo(String name, int employeeId){
-		
+    public EmployeeInfo(String employeeName, int employeeId){
+		this.employeeName = employeeName;
+		this.employeeId = employeeId;
 	}
 	
 	/*
@@ -47,33 +54,91 @@ public class EmployeeInfo {
 	 * So you probably need to send 2 arguments.
 	 * 
 	 */
-	public static int calculateEmployeeBonus(int numberOfYearsWithCompany){
-		int total=0;
-		return total;
-	}
-	
+	public static int calculateEmployeeBonus(int numberOfYearsWithCompany) {
+        double yearlyBonus = 0;
+        if (performance == 5) {
+            yearlyBonus = salary * 0.1 * 12;
+        } else if (performance == 4) {
+            yearlyBonus = salary * 0.08 * 12;
+        } else if (performance == 3) {
+            yearlyBonus = salary * 0.06 * 12;
+        } else if (performance == 2) {
+            yearlyBonus = 0;
+            System.out.println(" your performance is not enoght to get a bonus to sad ");
+        } else {
+            yearlyBonus = 0;
+            System.out.println(" is not enought");
+        }
+        int total= 0;
+        System.out.println("total employee bonus =" + total);
+
+        return total;
+    }
+
 	/*
 	 * This methods should calculate Employee Pension based on salary and numbers of years with the company.
 	 * Then it will return the total pension. So you need to implement the logic.
 	 * Hints: pension will be 5% of the salary for 1 year, 10% for 2 years with the company and so on.
 	 * 
 	 */
-	public static int calculateEmployeePension(){
-		int total=0;
-		Scanner sc  = new Scanner(System.in);
-		System.out.println("Please enter start date in format (example: May,2015): ");
-		String joiningDate = sc.nextLine();
-		System.out.println("Please enter today's date in format (example: August,2017): ");
-		String todaysDate = sc.nextLine();
+	public static double calculateEmployeePension(double salary) {
+        double total = 0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter start date in format (example: May,2015): ");
+        String joiningDate = sc.nextLine();
+        System.out.println("Please enter today's date in format (example: August,2017): ");
+        String todaysDate = sc.nextLine();
         String convertedJoiningDate = DateConversion.convertDate(joiningDate);
         String convertedTodaysDate = DateConversion.convertDate(todaysDate);
-
+        String startYear = convertedJoiningDate.substring(convertedJoiningDate.length()-4, convertedJoiningDate.length());
+        String currentYear = startYear.substring(startYear.length() - 4, startYear.length());
         //implement numbers of year from above two dates
-		//Calculate pension
+        int start = Integer.parseInt(startYear);
+        int current = Integer.parseInt(currentYear);
+        //Calculate pension
+        int numberOfYears = current - start;
 
-		return total;
-	}
-	private static class DateConversion {
+        if (numberOfYears >= 5) {
+            total = salary * .25;
+        } else if (numberOfYears == 4) {
+            total = salary * 0.20;
+        }    else if(numberOfYears ==3){
+            total = salary * .15;
+        }else if (numberOfYears ==2){
+            total = salary * .10;
+        }else if (numberOfYears ==1){
+            total = salary * .05;
+        }else if(numberOfYears==0){
+            total =0;
+        }
+        System.out.println("total pension =  " +total);
+            return total;
+    }
+    public int employeeId() {
+        return 0;
+    }
+
+
+    public String employeeName() {
+        return null;
+    }
+
+
+    public void assignDepartment() {
+
+    }
+
+
+    public int calculateSalary() {
+        return 0;
+    }
+
+
+    public void benefitLayout() {
+
+    }
+
+    private static class DateConversion {
 
 		public DateConversion(Months months){}
 		public static String convertDate(String date) {
