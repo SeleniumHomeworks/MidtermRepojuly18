@@ -39,6 +39,8 @@ public class Numbers {
 		algo.insertionSort(num);
 		long insertionSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of " + num.length + " numbers in Insertion Sort take: " + insertionSortExecutionTime + " milli sec");
+
+
 		connectToSqlDB.insertDataFromArrayToSqlTable(num, "selection_sort", "SortingNumbers");
 		//By following above, Continue for rest of the Sorting Algorithm....
          algo.insertionSort(num);
@@ -52,6 +54,7 @@ public class Numbers {
 		System.out.println("total execution time " + num.length + " numbers in quick Sort takes:" + quickSortExecutionTime + " mili sec");
 		connectToSqlDB.insertDataFromArrayToSqlTable(num, "selection_sort", "SortingNumbers");
 
+		randomize(num, n);
         algo.heapSort(num);
         long heapSortExecutationTime = algo.executionTime;
 		System.out.println("total execution time " + num.length + " numbers in heap sort takes " + heapSortExecutationTime+ " mili sec");
