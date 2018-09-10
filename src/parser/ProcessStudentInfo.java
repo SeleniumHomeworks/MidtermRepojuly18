@@ -86,7 +86,10 @@ public class ProcessStudentInfo {
 
 			   //Retrieve Selenium students from Database
 
-
+              List<Student> selList = connectToMongoDB.readStudentListFromMongoDB("Selenium");
+               for(Student sts : stList){
+                   System.out.println(sts.getFirstName()+ " " + sts.getLastName() + " " + sts.getId());
+               }
 			}
 
 }

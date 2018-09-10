@@ -70,10 +70,6 @@ public class Numbers {
 		connectToSqlDB.insertDataFromArrayToSqlTable(num, "merge_sort", "SortingNumbers");
 		List<String> numbers3 = connectToSqlDB.readDataBase("merge_sort", "SortingNumbers");
 
-
-
-
-
 		for(String st:numbers3){
 			System.out.println(st);
 		}
