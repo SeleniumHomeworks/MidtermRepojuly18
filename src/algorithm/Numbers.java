@@ -41,10 +41,22 @@ public class Numbers {
 		System.out.println("Total Execution Time of " + num.length + " numbers in Insertion Sort take: " + insertionSortExecutionTime + " milli sec");
 
 		//By following above, Continue for rest of the Sorting Algorithm....
+         algo.insertionSort(num);
+         long bubbleSortExecutionTime = algo.executionTime;
+		System.out.println("the total execution time" + num.length + "numbers in bubble sort takes : " + bubbleSortExecutionTime
+		 + "mili secs");
 
+        algo.quickSort(num);
+        long quickSortExecutionTime = algo.executionTime;
+		System.out.println("total execution time " + num.length + " numbers in quick Sort takes:" + quickSortExecutionTime + " mili sec");
 
+        algo.heapSort(num);
+        long heapSortExecutationTime = algo.executionTime;
+		System.out.println("total execution time " + num.length + " numbers in heap sort takes " + heapSortExecutationTime+ " mili sec");
 
-
+		algo.bubbleSort(num);
+		long bucketSortExcecutionTime  = algo.executionTime;
+		System.out.println( "total execution time "+ num.length + "number in bucket sort takes " + bucketSortExcecutionTime + " mili sec");
 
 		//Come to conclusion about which Sorting Algo is better in given data set.
 
@@ -69,6 +81,29 @@ public class Numbers {
 			arr[j] = temp;
 		}
 	}
+
+	public static int findLow(int[]array){
+		int low = array[0];
+		for (int n : array){
+			if (array[n]< low){
+				low = array[n];
+			}
+		}
+		return low;
+	}
+
+	public static int findHigh(int[]array){
+		int high = array[0];
+		for (int n : array){
+			if (array[n]> high){
+				high = array[n];
+			}
+		}
+		return high;
+	}
+
+
+
 	public static void printValue(List<String> array){
 		for(String st:array){
 			System.out.println(st);

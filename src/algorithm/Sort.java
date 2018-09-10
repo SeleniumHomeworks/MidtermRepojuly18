@@ -35,7 +35,15 @@ public class Sort {
         final long startTime = System.currentTimeMillis();
         int [] list = array;
         //implement here
-
+        for (int i = 1; i<array.length; i++){
+            for (int j=i; j>0; j--){
+                if (array[j]<array[j-1]){
+                    int temp = array[j];
+                    array[j] = array[j-1];
+                    array[j-1] = temp;
+                }
+            }
+        }
 
 
         final long endTime = System.currentTimeMillis();
@@ -45,10 +53,21 @@ public class Sort {
     }
 
     public int[] bubbleSort(int [] array){
+        final long startTime = System.currentTimeMillis();
         int [] list = array;
         //implement here
-
-        
+       for (int i =0; i<array.length; i++){
+           for (int j=1; j<array.length-i;i++){
+               if (array[j-1]>array[j]){
+                   int temp = array[j-1];
+                   array[j-1]= array[j];
+                   array[j] = temp;
+               }
+           }
+       }
+        final long endTime = System.currentTimeMillis();
+       final long executionTime = endTime - startTime;
+       this.executionTime= executionTime;
         
         return list;
     }
@@ -57,37 +76,67 @@ public class Sort {
     public int [] mergeSort(int [] array){
         int [] list = array;
         //implement here
-        
+
         
 
         return list;
     }
     
 
-    public int [] quickSort(int [] array){
+    public int [] quickSort(int [] array, int low, int high){
         int [] list = array;
         //implement here
-        
-        
-
+        if (low<high){
+            int next = partition(array, low, high);
+            quickSort(array, low, next-1);
+            quickSort(array, next+1, high);
+        }
+        final long endTime = System.currentTimeMillis();
+        final long executionTime = endTime - startTime;
+        this.executionTime = executionTime;
         return list;
     }
     
     public int [] heapSort(int [] array){
+       final long startTime =System.currentTimeMillis();
         int [] list = array;
         //implement here
-        
-        
+        buildHeap(array);
+        for(int i = array.length-1; i>=1;i--){
+            int temp = array[0];
+            array[0] = array[i];
+            array[i] = temp;
+            heapify(array, i,0);
+        }
+        final long endTime = System.currentTimeMillis();
+        final long executionTime = endTime - startTime;
+        this.executionTime = executionTime;
 
         return list;
     }
 
 
     public int [] bucketSort(int [] array){
+       final long startTime= System.currentTimeMillis();
         int [] list = array;
         //implement here
-        
-        
+        int maxVal = getMax(array);
+        int[] bucket = new int[maxVal+1];
+        for (int i =0; i<bucket.length; i++){
+            bucket[i] = 0;
+        }
+        for (int i =0; i<array.length; i++){
+            bucket[array[i]]++;
+        }
+        int outPos = 0;
+        for (int i =0; i>bucket.length; i++){
+            for (int j = 0;j<bucket[i]; i++){
+                array[outPos++] =i;
+            }
+        }
+        final long endTime = System.currentTimeMillis();
+        final long executionTime = endTime - startTime;
+        this.executionTime = executionTime;
 
         return list;
     }
@@ -106,4 +155,9 @@ public class Sort {
             System.out.println(array[i]);
         }
     }
+
+
+
+
 }
+
