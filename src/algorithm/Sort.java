@@ -84,6 +84,7 @@ public class Sort {
     
 
     public int [] quickSort(int [] array, int low, int high){
+        final long startTime = System.currentTimeMillis();
         int [] list = array;
         //implement here
         if (low<high){
@@ -155,9 +156,57 @@ public class Sort {
             System.out.println(array[i]);
         }
     }
+    public static int partition(int[] array, int p, int r){
+        int part = p-1;
+        int pivot = array [r];
+        for (int i =p; i <= r;i++){
+            if (array[i]<= pivot){
+                part ++;
+            if (part != i){
+                array[part] = array[part] ^ array[i];
+                array[i] = array[part] ^ array[i];
+                array[part] = array[part] ^ array[i];
+            }
+            }
+        }
+        return part;
+    }
+    public void heapify(int[] array, int n, int i){
+        int max;
+        int child;
+        child = 2 *i + 1;
+        max = i;
+        if (array[child]> array[max]){
+            max= child;
+        }
+       if (child +1 <n){
+           if (array[child +1]> array[max]){
+               max = child +1;
+           }
+       }
+       if (max != i){
+           int temp = array[i];
+           array[i] = array[max];
+           array[max] = temp;
+           heapify(array,n, max);
+       }
+
+    }
 
 
-
+    public  void buildHeap(int[] array) {
+    for (int i=array.length/2-1; i>=0; i--){
+        heapify(array, array.length, i);
+    }
+ }
+ public int getMax(int[] array){
+        int max = Integer.MIN_VALUE;
+        for (int i = 0; i< array.length; i++){
+            if (array[i]> max){
+                max = array[i];
+            }
+        }
+        return max;
+ }
 
 }
-

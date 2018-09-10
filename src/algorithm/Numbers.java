@@ -46,7 +46,7 @@ public class Numbers {
 		System.out.println("the total execution time" + num.length + "numbers in bubble sort takes : " + bubbleSortExecutionTime
 		 + "mili secs");
 
-        algo.quickSort(num);
+        algo.quickSort(num, findLow(num), findHigh(num));
         long quickSortExecutionTime = algo.executionTime;
 		System.out.println("total execution time " + num.length + " numbers in quick Sort takes:" + quickSortExecutionTime + " mili sec");
 
