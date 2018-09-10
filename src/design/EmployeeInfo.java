@@ -1,7 +1,5 @@
 package design;
 
-import jdk.internal.joptsimple.util.DateConverter;
-
 import java.util.Scanner;
 
 public class EmployeeInfo extends EmployeeAbstract {
@@ -26,7 +24,7 @@ public class EmployeeInfo extends EmployeeAbstract {
 	static private int employeeId;
 	private String employeeName;
 	private String departamentName;
-	private static int salary;
+	private static double salary;
 	private  static double performance;
 	/*
 	 * You must implement the logic for below 2 methods and 
@@ -45,7 +43,46 @@ public class EmployeeInfo extends EmployeeAbstract {
 		this.employeeName = employeeName;
 		this.employeeId = employeeId;
 	}
-	
+	public void setEmployeeId(int EmployeeId){
+	    this.employeeId = employeeId;
+    }
+    public String getEmployeeName(){
+	    return employeeName;
+	}
+	 public double getSalary(){
+	    return salary;
+     }
+     public void setSalary(double salary){
+	    this.salary = salary;
+     }
+     public double getPerformance(){
+	    return performance;
+     }
+     public void setPerformance(int performance){
+	    this.performance = performance;
+	}
+
+	public void assignDepartment(String departamentName){
+	    this.departamentName = departamentName;
+    }
+    public String getDepartamentName(){
+	    return departamentName;
+    }
+    public void describeCcompany(){
+	    companyName = " Google inc";
+        System.out.println("the company name is" + companyName);
+    }
+    public void describeCompany(String objective){
+        System.out.println(objective);
+    }
+    public void describeCompany(String objective, String target){
+        System.out.println(objective);
+        System.out.println(target);
+	}
+	public double calculateSalary(double salary){
+	    double yearlySalary = salary * 12;
+	    return yearlySalary;
+    }
 	/*
 	 * This methods should calculate Employee bonus based on salary and performance.
 	 * Then it will return the total yearly bonus. So you need to implement the logic.
@@ -54,7 +91,7 @@ public class EmployeeInfo extends EmployeeAbstract {
 	 * So you probably need to send 2 arguments.
 	 * 
 	 */
-	public static int calculateEmployeeBonus(int numberOfYearsWithCompany) {
+	public static double calculateEmployeeBonus(double salary, int performance) {
         double yearlyBonus = 0;
         if (performance == 5) {
             yearlyBonus = salary * 0.1 * 12;
