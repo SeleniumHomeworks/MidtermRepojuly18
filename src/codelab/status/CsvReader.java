@@ -73,6 +73,6 @@ public class CsvReader {
         }
 
         System.out.println("the average number of problems solved by students is :  " + total/size);
-    }
+}
 
 }

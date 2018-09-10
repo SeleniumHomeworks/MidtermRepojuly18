@@ -64,6 +64,25 @@ public class Numbers {
 		long bucketSortExcecutionTime  = algo.executionTime;
 		System.out.println( "total execution time "+ num.length + "number in bucket sort takes " + bucketSortExcecutionTime + " mili sec");
 		connectToSqlDB.insertDataFromArrayToSqlTable(num, "selection_sort", "SortingNumbers");
+
+		long mergeSortExecutionTime = algo.executionTime;
+		System.out.println("Total Execution Time of " + num.length + " numbers in Merge Sort take: " + mergeSortExecutionTime + " milli sec");
+		connectToSqlDB.insertDataFromArrayToSqlTable(num, "merge_sort", "SortingNumbers");
+		List<String> numbers3 = connectToSqlDB.readDataBase("merge_sort", "SortingNumbers");
+
+
+
+
+
+		for(String st:numbers3){
+			System.out.println(st);
+		}
+		randomize (num, n);
+
+
+
+
+
 		//Come to conclusion about which Sorting Algo is better in given data set.
 
 	}
