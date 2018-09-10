@@ -1,37 +1,95 @@
 Please answer the below Data Structure Questions:
 
 why do we need data structure?
-A.
+A.Data structure in java is needed so that sortin and organizing datan can be donde efficiently.
 What are the various operations that can be performed on different Data Structures?
+A.Searching, Traversing, Inserting, Deleting, Sorting and Merging.
 List out the areas in which data structures are applied extensively?
+A.Compiler Design, Operating System, Simulation, Graphics, Numerical Analysis, Database
+management system, Statistical Analysis Package.
 what is an Array?
+A. An array is a container object that golds a fixed number of values of a single type.
 what is the difference between the Array and ArrayList?
+A.Array is a fixed length data structure , you cannot change the length of Array once created,
+ArrayList re-size itself when gets full fdepending upon capacity and load factor.
 what is LinkedList?
+A. Is a linear data structure where each element is separate object.
 How is an Array different from Linked List?
+A. The difference is :
+In array, each element is independent, no connection with previous element.
+In linkList, location or address of elements is stored in the link part of previous element.
 what is queue?
+A.Queue represents an ordered list of objects just like a list but its intended use is different.
 what is stack?
+A.stack is a collection that is based on the las in first out or LIFO.
 what is FIFO and LIFO?
+A.FIFO stands for first in first out and LIFO stands for last in first out.
 what is the order of complexity?
+A.when you optimize code for speed, if an input requires size of N in the code, it will have O(N) complexity.
 what is the best case to search an element from an array?
+A.the best case to search an element from an array is by first element of the list.
 what is the worst case to search an element from an array?
+A.The worst way to search an element from an array is by the last element.
 what is tree in data structure?
+A. A tree is a widely used abstract data type that simulates a hierarchical tree structure,
+with a root value and subtrees of children with a parent node, represented as set of linked nodes.
 what is graph in data structure?
+A. a graph is an object consisting of a vertex set and a edge set.
 what is the difference between the HashTable and HashMap?
+A. HashTable is a data structure to retain values of key-value pair;
+HashMap accepts key value pair.
 What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model.
+A. RDBMS : Array , Network data model : Graph, Hierarchical data model : trees.
 How HashMap works in java?
+A. HashMap accepts key value pair in java.
 What is ArrayIndexOutOfBoundsException in java? When it occurs?
+All array accesses are checked at run time; an attempt to use an index that is less than zero or greater than
+or equal to the length of the array.
 What are the different ways of copying an array into another array?
+A.there are four different ways to copy al elements of one array into another array:
+manually, Arrays.copyOf(), System.arraycopy() and Object.clone().
 What is difference between an array and a linked list?
+A. The difference is :
+In array, each element is independent, no connection with previos element or with its location.
+In LinkedList, location or address of elements is stored in the link part of previous element.
 What is DFS and BFS?
+A.DFS: Depth First Search; BFS: Breadth First Search.
 What is Recursion?
+A. Recursion is a basic programming technique that you can use in Java, in which a method calls itself to solve some
+problem.
 What are linear and non linear data Structures?
+A.Linear data structure - all the data arranged in sequence manner.
+Non Linear data structure - all the data are arranged in random manner.
 What is Big-(O)-notation?
+A. Describes the performance or complexity of an algorithm.
 Outlined different kind of sorting algorithm with time complexity?
+A.QuickSort: Best(O(n log(n)); Average(O(nlog(n));worst(O(N^2)
+InsertionSort: Best(O(n));Average(O(n^2));worst(O(n^2))
 
 Draw a table with time complexity in which it will summarize all the data structure feature's advantages and disadvantages.
   a)In terms of Accessing element.
   b)In terms of Inserting element.
   c)In terms of Searching element.
   d)In terms of Removing element.
+
+                              Common Data Structure Operations
+  Data Structure	    Time Complexity
+                      Average	                                        Worst
+                      Access	    Search	    Insertion	Deletion	Access	    Search	    Insertion	Deletion
+Array	            Θ(1)	    Θ(n)	    Θ(n)	    Θ(n)	    O(1)	    O(n)	    O(n)	    O(n)
+Stack	            Θ(n)	    Θ(n)	    Θ(1)	    Θ(1)	    O(n)	    O(n)	    O(1)	    O(1)
+Queue	            Θ(n)	    Θ(n)	    Θ(1)	    Θ(1)	    O(n)	    O(n)	    O(1)	    O(1)
+Singly-Linked List	Θ(n)	    Θ(n)	    Θ(1)	    Θ(1)	    O(n)	    O(n)	    O(1)	    O(1)
+Doubly-Linked List	Θ(n)	    Θ(n)	    Θ(1)	    Θ(1)	    O(n)	    O(n)	    O(1)	    O(1)
+Skip List	        Θ(log(n))	Θ(log(n))	Θ(log(n))	Θ(log(n))	O(n)	    O(n)	    O(n)	    O(n)
+Hash Table	        N/A	        Θ(1)	    Θ(1)	    Θ(1)	    N/A	        O(n)	    O(n)	    O(n)
+Binary Search Tree	Θ(log(n))	Θ(log(n))	Θ(log(n))	Θ(log(n))	O(n)	    O(n)	    O(n)	    O(n)
+Cartesian Tree	    N/A	        Θ(log(n))	Θ(log(n))	Θ(log(n))	N/A	        O(n)	    O(n)	    O(n)
+B-Tree	            Θ(log(n))	Θ(log(n))	Θ(log(n))	Θ(log(n))	O(log(n))	O(log(n))	O(log(n))	O(log(n))
+Red-Black Tree	    Θ(log(n))	Θ(log(n))	Θ(log(n))	Θ(log(n))	O(log(n))	O(log(n))	O(log(n))	O(log(n))
+Splay Tree	        N/A	        Θ(log(n))	Θ(log(n))	Θ(log(n))	N/A	        O(log(n))	O(log(n))	O(log(n))
+AVL Tree	        Θ(log(n))	Θ(log(n))	Θ(log(n))	Θ(log(n))	O(log(n))	O(log(n))	O(log(n))	O(log(n))
+KD Tree 	        Θ(log(n))	Θ(log(n))	Θ(log(n))	Θ(log(n))	O(n)	    O(n)	    O(n)	    O(n)
+
 
 
