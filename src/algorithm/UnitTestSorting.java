@@ -23,6 +23,50 @@ public class UnitTestSorting {
 
         //Now implement Unit test for rest of the soring algorithm...................below
 
+        sort.insertionSort(unSortedArray);
+        try{
+            Assert.assertEquals(sortedArray, unSortedArray, "Insertion sort array is not unsorted");
+        }catch (Exception ex){
+            ex.getMessage();
+        }
+       sort.bubbleSort(unSortedArray);
+        try{
+            Assert.assertEquals(sortedArray,unSortedArray, "bubble sort array is not sorted" );
+        }catch (Exception ex){
+            ex.getMessage();
+        }
+    sort.mergeSort(unSortedArray);
+        try{
+            Assert.assertEquals(sortedArray, unSortedArray, "merge sort array is not sorted");
+        }catch (Exception ex){
+            ex.getMessage();
+        }
+       sort.heapSort(unSortedArray);
+        try{
+            Assert.assertEquals(sortedArray, unSortedArray," heap sort array is not sorted");
+        }catch (Exception ex){
+            ex.getMessage();
 
+            sort.bucketSort(unSortedArray);
+            try{
+                Assert.assertEquals(sortedArray, unSortedArray, " bucket sort array is not sorted");
+            }catch (Exception e){
+                ex.getMessage();
+
+                sort.getMax(unSortedArray);
+                try{
+                    Assert.assertEquals(unSortedArray, sortedArray, " getMax sort array is not sorted");
+                }catch(Exception x){
+                    ex.getMessage();
+                }
+            sort.shellSort(unSortedArray);
+                try{
+                    Assert.assertEquals(sortedArray, unSortedArray, " shell sort Array is not sorted");
+                }catch(Exception a){
+                    ex.getMessage();
+                }
+
+            }
+        }
     }
 }
