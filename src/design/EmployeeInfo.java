@@ -3,95 +3,108 @@ package design;
 import java.util.Scanner;
 
 public class EmployeeInfo extends EmployeeAbstract {
-	
- /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
- * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
- * then inherit that abstract class into EmployeeInfo class.Once you done with designing EmployeeInfo class,
- * go to FortuneEmployee class to apply all the fields and attributes.
- * 
- * Important: YOU MUST USE the 
- * OOP(abstraction,Encapsulation, Inheritance and Polymorphism) concepts in every level possible.
- * Use all kind of keywords(super,this,static,final........)
- * Implement Nested class.
- * Use Exception Handling.
- *
- */
 
-	/*
-	 * declare few static and final fields and some non-static fields
-	 */
-	static String companyName;
-	static private int employeeId;
-	private String employeeName;
-	private String departamentName;
-	private static double salary;
-	private  static double performance;
-	/*
-	 * You must implement the logic for below 2 methods and 
-	 * following 2 methods are prototype as well for other methods need to be design,
-	 * as you will come up with the new ideas.
-	 */
-	
-	/*
-	 * you must have multiple constructor.
-	 * Must implement below constructor.
-	 */
-	public EmployeeInfo(int employeeId){
-		this.employeeId = employeeId;
-	}
-    public EmployeeInfo(String employeeName, int employeeId){
-		this.employeeName = employeeName;
-		this.employeeId = employeeId;
-	}
-	public void setEmployeeId(int EmployeeId){
-	    this.employeeId = employeeId;
-    }
-    public String getEmployeeName(){
-	    return employeeName;
-	}
-	 public double getSalary(){
-	    return salary;
-     }
-     public void setSalary(double salary){
-	    this.salary = salary;
-     }
-     public double getPerformance(){
-	    return performance;
-     }
-     public void setPerformance(int performance){
-	    this.performance = performance;
-	}
+    /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
+     * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
+     * then inherit that abstract class into EmployeeInfo class.Once you done with designing EmployeeInfo class,
+     * go to FortuneEmployee class to apply all the fields and attributes.
+     *
+     * Important: YOU MUST USE the
+     * OOP(abstraction,Encapsulation, Inheritance and Polymorphism) concepts in every level possible.
+     * Use all kind of keywords(super,this,static,final........)
+     * Implement Nested class.
+     * Use Exception Handling.
+     *
+     */
 
-	public void assignDepartment(String departamentName){
-	    this.departamentName = departamentName;
+    /*
+     * declare few static and final fields and some non-static fields
+     */
+    static String companyName;
+    static private int employeeId;
+    private String employeeName;
+    private String departamentName;
+    private static double salary;
+    private static double performance;
+    /*
+     * You must implement the logic for below 2 methods and
+     * following 2 methods are prototype as well for other methods need to be design,
+     * as you will come up with the new ideas.
+     */
+
+    /*
+     * you must have multiple constructor.
+     * Must implement below constructor.
+     */
+    public EmployeeInfo(int employeeId) {
+        this.employeeId = employeeId;
     }
-    public String getDepartamentName(){
-	    return departamentName;
+
+    public EmployeeInfo(String employeeName, int employeeId) {
+        this.employeeName = employeeName;
+        this.employeeId = employeeId;
     }
-    public void describeCcompany(){
-	    companyName = " Google inc";
+
+    public void setEmployeeId(int EmployeeId) {
+        this.employeeId = employeeId;
+    }
+
+    public String getEmployeeName() {
+        return employeeName;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public double getPerformance() {
+        return performance;
+    }
+
+    public void setPerformance(int performance) {
+        this.performance = performance;
+    }
+
+    public void assignDepartment(String departamentName) {
+        this.departamentName = departamentName;
+    }
+
+    public String getDepartamentName() {
+        return departamentName;
+    }
+
+    public void describeCcompany() {
+        companyName = " Google inc";
         System.out.println("the company name is" + companyName);
     }
-    public void describeCompany(String objective){
+
+    public void describeCompany(String objective) {
         System.out.println(objective);
     }
-    public void describeCompany(String objective, String target){
+
+    public void describeCompany(String objective, String target) {
         System.out.println(objective);
         System.out.println(target);
-	}
-	public double calculateSalary(double salary){
-	    double yearlySalary = salary * 12;
-	    return yearlySalary;
     }
-	/*
-	 * This methods should calculate Employee bonus based on salary and performance.
-	 * Then it will return the total yearly bonus. So you need to implement the logic.
-	 * Hints: 10% of the salary for best performance, 8% of the salary for average performance and so on. 
-	 * You can set arbitrary number for performance.
-	 * So you probably need to send 2 arguments.
-	 * 
-	 */
-	public static double calculateEmployeeBonus(double salary, int performance) {
+
+    public double calculateSalary(double salary) {
+        double yearlySalary = salary * 12;
+        return yearlySalary;
+    }
+
+    /*
+     * This methods should calculate Employee bonus based on salary and performance.
+     * Then it will return the total yearly bonus. So you need to implement the logic.
+     * Hints: 10% of the salary for best performance, 8% of the salary for average performance and so on.
+     * You can set arbitrary number for performance.
+     * So you probably need to send 2 arguments.
+     *
+     */
+    public static double calculateEmployeeBonus(double salary, int performance) {
         double yearlyBonus = 0;
         if (performance == 5) {
             yearlyBonus = salary * 0.1 * 12;
@@ -106,19 +119,19 @@ public class EmployeeInfo extends EmployeeAbstract {
             yearlyBonus = 0;
             System.out.println(" is not enought");
         }
-        int total= 0;
+        int total = 0;
         System.out.println("total employee bonus =" + total);
 
         return total;
     }
 
-	/*
-	 * This methods should calculate Employee Pension based on salary and numbers of years with the company.
-	 * Then it will return the total pension. So you need to implement the logic.
-	 * Hints: pension will be 5% of the salary for 1 year, 10% for 2 years with the company and so on.
-	 * 
-	 */
-	public static double calculateEmployeePension(double salary) {
+    /*
+     * This methods should calculate Employee Pension based on salary and numbers of years with the company.
+     * Then it will return the total pension. So you need to implement the logic.
+     * Hints: pension will be 5% of the salary for 1 year, 10% for 2 years with the company and so on.
+     *
+     */
+    public static double calculateEmployeePension(double salary) {
         double total = 0;
         Scanner sc = new Scanner(System.in);
         System.out.println("Please enter start date in format (example: May,2015): ");
@@ -127,7 +140,7 @@ public class EmployeeInfo extends EmployeeAbstract {
         String todaysDate = sc.nextLine();
         String convertedJoiningDate = DateConversion.convertDate(joiningDate);
         String convertedTodaysDate = DateConversion.convertDate(todaysDate);
-        String startYear = convertedJoiningDate.substring(convertedJoiningDate.length()-4, convertedJoiningDate.length());
+        String startYear = convertedJoiningDate.substring(convertedJoiningDate.length() - 4, convertedJoiningDate.length());
         String currentYear = startYear.substring(startYear.length() - 4, startYear.length());
         //implement numbers of year from above two dates
         int start = Integer.parseInt(startYear);
@@ -135,22 +148,35 @@ public class EmployeeInfo extends EmployeeAbstract {
         //Calculate pension
         int numberOfYears = current - start;
 
-        if (numberOfYears >= 5) {
-            total = salary * .25;
-        } else if (numberOfYears == 4) {
-            total = salary * 0.20;
-        }    else if(numberOfYears ==3){
-            total = salary * .15;
-        }else if (numberOfYears ==2){
-            total = salary * .10;
-        }else if (numberOfYears ==1){
-            total = salary * .05;
-        }else if(numberOfYears==0){
-            total =0;
-        }
-        System.out.println("total pension =  " +total);
+        try {
+            if (numberOfYears >= 5) {
+                total = salary * .25;
+            } else if (numberOfYears == 4) {
+                total = salary * 0.20;
+            } else if (numberOfYears == 3) {
+                total = salary * .15;
+            } else if (numberOfYears == 2) {
+                total = salary * .10;
+            } else if (numberOfYears == 1) {
+                total = salary * .05;
+            } else if (numberOfYears == 0) {
+                total = 0;
+            }
+            System.out.println("total pension =  " + total);
             return total;
+
+
+        } catch (Exception ex) {
+            System.out.println(" error on this method ");
+        }
+        return numberOfYears;
     }
+
+
+    public static void setPerformance(double performance) {
+        EmployeeInfo.performance = performance;
+    }
+
     public int employeeId() {
         return 0;
     }
