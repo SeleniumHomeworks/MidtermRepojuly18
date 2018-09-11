@@ -35,7 +35,7 @@ public class UnitTestSorting {
         }catch (Exception ex){
             ex.getMessage();
         }
-    sort.mergeSort(unSortedArray);
+    //sort.mergeSort(unSortedArray);
         try{
             Assert.assertEquals(sortedArray, unSortedArray, "merge sort array is not sorted");
         }catch (Exception ex){
