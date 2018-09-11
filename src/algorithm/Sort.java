@@ -145,11 +145,19 @@ public class Sort {
     public int [] shellSort(int [] array){
         int [] list = array;
         //implement here
-        
+        final long startTime = System.currentTimeMillis();
+
+
+
+        final long endTime = System.currentTimeMillis();
+        final long executionTime = endTime - startTime;
+        this.executionTime = executionTime;
+     return list;
+    }
         
 
-        return list;
-    }
+
+
 
     public static void printSortedArray(int [] array){
         for(int i=0; i<array.length; i++){
