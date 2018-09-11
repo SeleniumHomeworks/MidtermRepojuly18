@@ -201,9 +201,14 @@ public class EmployeeInfo extends EmployeeAbstract {
 
     }
 
+
+    public void vacation() {
+        System.out.println("employees have no vacations in my company");
+    }
+
     private static class DateConversion {
 
-		public DateConversion(Months months){}
+		public  DateConversion(Months months){}
 		public static String convertDate(String date) {
 			String [] extractMonth = date.split(",");
 			String givenMonth = extractMonth[0];

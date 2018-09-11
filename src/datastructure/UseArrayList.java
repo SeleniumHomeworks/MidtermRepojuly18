@@ -1,6 +1,7 @@
 package datastructure;
 
 import databases.ConnectToMongoDB;
+import parser.Student;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -31,8 +32,8 @@ public class UseArrayList {
             System.out.println(y);
         }
 
-        /*ConnectToMongoDB connect = new ConnectToMongoDB();
-        connect.insertIntoMongoDB(student, "car");*/
+      //  ConnectToMongoDB connect = new ConnectToMongoDB();
+       // connect.insertIntoMongoDB(Student, "car");
 	}
 
 }

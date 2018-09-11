@@ -26,7 +26,9 @@ public class UseQueue {
         for (Integer x : queue){
             System.out.println(x);
         }
-        Iterator it = queue.iterator();
+
+
+          Iterator it = queue.iterator();
             while(it.hasNext()){
                 Integer i = (Integer) it.next();
                 System.out.println(i);

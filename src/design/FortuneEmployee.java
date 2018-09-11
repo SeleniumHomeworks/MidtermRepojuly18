@@ -30,6 +30,11 @@ public class FortuneEmployee {
 		emp2.assignDepartment("Developer");
 		emp3.assignDepartment("Bussiness Analyst");
 
+		emp1.vacation();
+		//emp2.vacation();
+		//emp3.vacation();
+
+
 		emp1.setSalary(10000);
 		emp1.calculateSalary(emp1.getSalary());
 		emp2.setSalary(9500);
@@ -61,7 +66,6 @@ public class FortuneEmployee {
 
         employeeInfo.put(101, employeeRecord101);
         employeeInfo.put(102, employeeRecord102);
-
 
 
 }
