@@ -23,7 +23,7 @@ public class Numbers{
 
     public static void main(String[] args) throws Exception {
 
-        int [] num = new int[10000];
+        int [] num = new int[1000000];
         storeRandomNumbers(num);
         //ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
         //Selection Sort

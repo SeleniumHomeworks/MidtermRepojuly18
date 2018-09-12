@@ -18,7 +18,7 @@ public class Anagram {
             System.out.println(Anagram + " is not anagram of  "+ word);
         }
     }
-    private static boolean isAnagram(String word, String alfa){
+    public static boolean isAnagram(String word, String alfa){
         if(word.length() !=alfa.length()){
             return false;
         }
