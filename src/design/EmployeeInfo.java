@@ -26,6 +26,7 @@ public class EmployeeInfo extends EmployeeAbstract {
     private String departamentName;
     private static double salary;
     private static double performance;
+    public int years;
     /*
      * You must implement the logic for below 2 methods and
      * following 2 methods are prototype as well for other methods need to be design,

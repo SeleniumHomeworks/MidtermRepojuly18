@@ -30,6 +30,9 @@ public class FortuneEmployee {
 		emp2.assignDepartment("Developer");
 		emp3.assignDepartment("Bussiness Analyst");
 
+
+
+
 		emp1.vacation();
 		//emp2.vacation();
 		//emp3.vacation();
@@ -43,7 +46,6 @@ public class FortuneEmployee {
 		emp3.setSalary(emp3.getSalary());
 		emp1.describeCcompany();
 		emp1.describeCompany(objective, target);
-
 		emp1.setPerformance(3);
 		double bonus1 = (emp1.calculateEmployeeBonus(emp1.getSalary(), (int) emp1.getPerformance()));
 		emp2.setPerformance(5);
